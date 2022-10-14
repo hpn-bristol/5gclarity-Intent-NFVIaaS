@@ -32,7 +32,7 @@ The Intent engine can now recieve intents at this URL: (IP or localhost):5001/in
 3. Download postman app and create your account, https://www.postman.com/
 4. Open your postman app and create a POST request to train the Intent Engine in order. The POST request called "Initialisation_Event" mas sent at the URL (IP or localhost):23324/apex/RestServerConsumer/EventIn.
 6. Sent the POST request.
-7. After train the Intent Engine, we can test the training by an Intent for NS instatiation, trained resource by creating a 
+7. After train the Intent Engine, we can test the training by an Intent for NS instatiation, create a POST request to submit the Intent http://10.68.110.53:5001/intent-input 
 ```json
 {
   "intent": {
