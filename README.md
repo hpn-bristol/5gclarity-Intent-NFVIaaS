@@ -41,3 +41,4 @@ The Intent engine can now recieve intents at this URL: (IP or localhost):5001/in
   }
 }
 ```
+8. Verify that the Intent Engine delivered the request to OSM and the VNF Packet is Created (empty). 
