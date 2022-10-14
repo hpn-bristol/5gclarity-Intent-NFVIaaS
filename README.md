@@ -1,12 +1,12 @@
 # Intent Engine Deployed in Bristol
 
-### This repository includes the Intent Engine developed through in the 5G-CLARITY Project and extended to support NFVIaaS deployment into the UC1 Narrative 1 and Narrative 2 to be run on Bristol. 
+This repository includes the Intent Engine developed through in the 5G-CLARITY Project and extended to support NFVIaaS deployment into the UC1 Narrative 1 and Narrative 2 to be run on Bristol. 
 
 ## Requirements
 
-### Computational Requirements for this deployment two Virtual Machines with 8 Gb RAN (Ideally) 40 Gb Hard Disk running the Ubuntu 18 or 20 Linux.
-### B - VM1 - Intent Engine
-### C - VM2 - NFVO MANO
+Computational Requirements for this deployment two Virtual Machines with 8 Gb RAN (Ideally) 40 Gb Hard Disk running the Ubuntu 18 or 20 Linux.
+- VM1 - Intent Engine
+- VM2 - NFVO MANO
 
 ## Steps for Deplopyment VM1
 1. Clone the Intent Engine. 
