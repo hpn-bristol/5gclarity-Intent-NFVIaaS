@@ -1,4 +1,4 @@
-# Intent Engine Deployed in Bristol
+# Intent Engine supported NFVIaaS Deployed in Bristol
 
 This repository includes the Intent Engine developed through in the 5G-CLARITY Project and extended to support NFVIaaS deployment into the UC1 Narrative 1 and Narrative 2 to be run on Bristol. 
 
