@@ -1,0 +1,23 @@
+
+#Folders and Files
+.settings/
+bin/
+configTEMPLATES/
+diagrams/
+events/
+idl/
+plantuml/
+src/
+swagger-examples/
+test/
+.classpath
+.project
+.pydevproject
+ParsedResults.xlsx
+pipe - Copy.txt
+pipe.txt
+test.log
+UC Diagram.dia
+
+#Keep These folders
+!policy-json/
