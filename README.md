@@ -11,7 +11,7 @@ Computational Requirements for this deployment two Virtual Machines with 8 Gb RA
 ## Steps for Deplopyment VM1
 1. Clone the Intent Engine. 
     ``` Bash
-        git clone --recurse-submodules https://github.com/Charlemagne2017/Intent-NFVIaaS.git
+        git clone https://github.com/Charlemagne2017/Intent-NFVIaaS.git
     ```
 2. Create a new directory called in /intentengine/matching/app/data/.
 3. Download the required data file from the [FastText resources page](https://dl.fbaipublicfiles.com/fasttext/vectors-wiki/wiki.simple.zip) (simple English binary). This is required as the data file exceeds the file size limit on GitHub.
