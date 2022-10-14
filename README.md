@@ -20,70 +20,24 @@ Computational Requirements for this deployment two Virtual Machines with 8 Gb RA
     ``` Bash 
         docker-compose up --build
     ```
-## Steps for Testing VM1
+## Steps for deployment of VM2 - NFVO OSM-MANO  
+1. Ensure that the VM is in the same network or has connectivity to the VM1.
+2. Install the OSM MANO following the following instructions https://osm.etsi.org/docs/user-guide/latest/03-installing-osm.html
+3. Configure the usernames and account and the access of the VIM to be able to deploy VNF. https://osm.etsi.org/docs/user-guide/latest/04-vim-setup.html
+4. Test the installation of OSM-MANO following the documentation.
+## Steps for Training and Testing IntentEngine to be able to deploy NFV into OSM MANO
 The Intent engine can now recieve intents at this URL: (IP or localhost):5001/intent-input.
 1. Ensure the VM is accesible by REST.
 2. If you already have Postman account jump to the step 4
 3. Download postman app and create your account, https://www.postman.com/
-4. Open your postman app and create a POST request to train the Intent Engine in order. The POST request called "Initialisation_Event" mas sent at the URL (IP or localhost):23324/apex/RestServerConsumer/EventIn.  An example of the JSON format of "Intialization Event" body is introduced. This is just a simple example which has not being tested please jump to the NFVIaaS setup in the next section. 
-  ```json
-{
-   "name":"Initialisation_Event",
-   "templateName":"NAME OF THE RESOURCE",
-   "url":"IP OF THE RESOURCE:8080",
-   "template":{
-      "swagger":"2.0",
-      "info":{
-         "description":"DESCRIPTION OF THE RESOURCE",
-         "version":"VESRSION",
-         "title":"NAME OF THE RESOURCE",
-         "license":{
-            "name":"MIT"
-         }
-      },
-      "basePath":"/",
-      "schemes":[
-         "http"
-      ],
-      "paths":{
-         "/system/functions":{
-            "get":{
-               "summary":"GET DESCRIPTION THAT NLP WILL MATCH",
-               "consumes":[
-                  "application/json"
-               ],
-               "produces":[
-                  "application/json"
-               ],
-               "responses":{
-                  "200":{
-                     "description":"ESPECTE RESPOSE SUCCESSFULL.",
-                     "schema":{
-                        "type":"array",
-                        "items":{
-                           "$ref":"#/definitions/FunctionListEntry"
-                        }
-                     }
-                  }
-               }
-            }
-         }
-          "externalDocs":{
-         "description":"DOCUMENTATION",
-         "url":"URL OF THE DOCUMENTATION"
-      }
-   }
-}
-```
-5. After train the Intent Engine, we can submit an Intent associated to the trained resource by creating a 
+4. Open your postman app and create a POST request to train the Intent Engine in order. The POST request called "Initialisation_Event" mas sent at the URL (IP or localhost):23324/apex/RestServerConsumer/EventIn.
+6. Sent the POST request.
+7. After train the Intent Engine, we can test the training by an Intent for NS instatiation, trained resource by creating a 
 ```json
 {
-   "intent":{
-      "request":"deploy RESOURCE DESCRIBED",
-      "parameters":{
-         "service":"SERVICE",
-         "parameters": "ADDITIONAL PARAMETERS"
-      }
-   }
+  "intent": {
+    "request": "Create new VNF package resource",
+    "parameters" : {}
+  }
 }
 ```
