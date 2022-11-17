@@ -1,7 +1,7 @@
 {
    "name":"Initialisation_Event",
    "templateName":"OSMTemplate",
-   "url":"(NFVO IP)":8080",
+   "url":"10.68.110.83:7777",
    "template":{
       "swagger": "2.0",
       "servers":[

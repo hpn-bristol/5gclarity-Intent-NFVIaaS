@@ -1,0 +1,74 @@
+{
+   "name":"Initialisation_Event",
+   "templateName":"OSMTemplate",
+   "url":"10.68.110.83:7777",
+   "template":{
+      "swagger": "2.0",
+      "paths": {
+         "/nslcm/v1/ns_instances/{nsInstanceId}": {
+            "get":{
+               "summary": "Show NS instance",
+               "description": "Read an individual NS instance resource",
+               "parameters": [
+                  {
+                     "in":"path",
+                     "name":"nsInstanceId",
+                     "description":"ns instance id",
+                     "type":"string",
+                     "required":true
+                  }
+               ]
+            },
+            "delete": {
+               "summary": "Delete NS instance",
+               "description": "Delete an individual NS instance resource",
+               "parameters": [
+                  {
+                     "in":"path",
+                     "name":"nsInstanceId",
+                     "description":"NS instance id",
+                     "type":"string",
+                     "required":true
+                  }
+               ]
+            }
+         },
+         "/nslcm/v1/ns_instances": {
+            "get": {
+               "summary": "List NS instances",
+               "description":"Query information about multiple NS instances"
+            },
+            "post": {
+               "summary": "Instantiate Network Service (NS)",
+               "description":"Create a new NS instance resource",
+               "parameters": [
+                  {
+                     "in":"body",
+                     "name":"nsName",
+                     "description":"NS name",
+                     "type":"string",
+                     "required":true,
+                     "schema": { "type": "string" }
+                  },
+                  {
+                     "in":"body",
+                     "name":"nsdId",
+                     "description":"NSD id",
+                     "type":"string",
+                     "required": true,
+                     "schema": { "type": "string" }
+                  },
+                  {
+                     "in":"body",
+                     "name":"vimAccountId",
+                     "description":"VIM acount id",
+                     "type":"string",
+                     "required":true,
+                     "schema": { "type": "string" }
+                  }
+               ]
+            }
+         }
+      }
+   }
+}
